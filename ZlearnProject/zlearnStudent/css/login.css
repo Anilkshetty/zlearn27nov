@@ -1,0 +1,27 @@
+*
+{
+    background: ;
+}
+
+  /* icon prefix focus color */
+  .input-field .prefix.active 
+  {
+    color: #00bcd4 ;
+  }
+  /* for checkbox */
+  [type="checkbox"]+label:before, [type="checkbox"]:not(.filled-in)+label:after 
+  {
+    margin-left: 8px;
+  }
+  /* icon prefix focus color */
+  .input-field .prefix.active {
+    color: rgb(245, 48, 169);
+  }
+       
+  .mycontainer
+  {
+      width:95%;
+      margin:auto;
+  }
+  /* for footer logo */
+  /* for onOfbtn button */

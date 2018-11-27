@@ -1,0 +1,706 @@
+<html lang="en">
+<head>
+
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="../css/materialize.min.css"  media="screen,projection"/>
+    <link rel="stylesheet" href="../css/admin.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+</head>
+<body>
+
+ <div class="navbar-fixed">
+    <nav>
+        <div class="nav-wrapper grey darken-4">
+            <a href="#" class="brand-logo"><img src="../image/logo-white.png" alt="" class="responsive-img" style="height:65px;"> </a>
+            <a href="#" class="button-collapse hide-on-large" data-activates="slide-out"><i class="material-icons">menu</i></a>
+
+
+       
+            <ul class="left hide-on-med-and-down" style="padding-left:255px;">
+                        <nav class="z-depth-0 " style="height:40px; margin-top:12px; width: 50%; ">    
+                                <div class="nav-wrapper grey darken-4">
+                                    <form>
+                                    <div class="input-field  z-depth-1">
+                                        <input id="search" type="search"  placeholder="Explore Zelern" autocomplete="off" required >
+                                        <label class="label-icon" for="search"><i class="material-icons black-text" style="margin-top:-22px;">search</i></label>
+                                        <i class="material-icons" style="margin-top:-12px; font-size:20px;">close</i>
+                                    </div>
+                                    </form>
+                                </div>
+                        </nav>                
+            </ul> 
+
+            <ul class="right">
+                <li><a href="#" class="dropdown-profilebutton " data-activates="dropdown-profile"><img src="../image/person.jpg" alt="" class="responsive-img circle myProfileImage"></a></li>
+                <li><a href="#" class="dropdown-button" data-activates="dropdown-notification"><i class="material-icons">notifications_active</i></a></li>
+                <li class="hide-on-small-only"><a href="#"  class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="Logout"><i class="fa fa-sign-out" style="font-size:25px;"></i></a></li>
+            </ul>  
+            
+            <!-- dropdown structure for profile -->
+
+            <ul id="dropdown-profile" class="dropdown-content z-depth-3 dropdown-profile" >
+
+                    <li><a href="#"><i class="fa fa-user left dropdwncolor" aria-hidden="true"></i> Profile</a></li>
+                    <li><a href="#"><i class="fa fa-cogs left dropdwncolor" aria-hidden="true"></i> Settings</a></li>
+                    <li><a href="#"><i class="fa fa-question-circle left dropdwncolor" aria-hidden="true"></i> Help</a></li>
+                    <li class="divider"></li>
+                    <li><a href="/logout/"><i class="fa fa-sign-out left dropdwncolor" aria-hidden="true"></i> Logout</a></li>
+            </ul>
+
+            <!-- drop structure for notification -->
+
+            <ul id="dropdown-notification" class="dropdown-content dropdown-notification">
+                <li><a href="#!" class="" style="font-size:15px;font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif">NOTIFICATION<span class="new badge right pink">1</span></a></li>
+            </ul>
+            
+        </div> 
+   </nav>
+</div>
+<!-- header end -->
+<ul class="side-nav fixed mysidenav" id="slide-out" style="height: calc(100% - 5px);">
+    <li class="grey lighten-3">
+        <div class="user-view ">
+            <div class="background hoverable">
+                <!-- <img src="../image/pexels.jpeg" alt=""  class="responsive-img"> -->
+            </div>
+            <a href="#"><img src="../image/person.jpg" alt="" class="responsive-img circle z-depth-2"></a>
+            <a href="#"><span class="name orange-text" style="font-weight:bold;">ARCHANA BM</span></a>
+            <a href="#"><span class="email black-text" style="font-family: monospace;padding: 0;font-weight:bold;">Archan@gmail.com</span></a>
+            <a href="#"><span class="name black-text" style="font-family:monospace;margin: 0;padding: 0;font-weight:bold;">BNMIT COLLEGE</span></a>
+        </div>
+        <div class="divider"></div>
+    </li>
+
+    <li>
+        <a href="#"><i class="fa fa-tachometer myicon" aria-hidden="true"></i>Dashboard</a>
+    </li>
+
+    <li id="university">
+            <a href="#"><i class="fa fa-university myicon" aria-hidden="true"></i>University </a>
+    </li>
+
+    <li id="college">      
+            <a href="#"><i class="fas fa-graduation-cap myicon" id="bg7" aria-hidden="true"></i>College </a>         
+    </li>
+
+    <li>        
+        <a href="#"><i class="fa fa-question-circle myicon" aria-hidden="true"></i>Question</a>         
+    </li>
+
+    <li>
+            <a href="#"><i class="fas fa-sticky-note myicon" id="bg7" aria-hidden="true"></i>Ebook</a>            
+   </li>
+
+   <li>  
+        <a href="#"><i class="fa fa-black-tie myicon" id="bg7" aria-hidden="true"></i>Module</a>          
+  </li>  
+
+   <li>
+        <a href="#"><i class="fas fa-poll-h myicon" id="bg7" aria-hidden="true"></i>Test</a>           
+  </li>
+
+</ul>
+
+
+<!-- sidenav end -->
+
+<div class="main">
+    <div class="mymaincontainer" id="myuniversity">
+            <h3 style="color:grey;">Universities
+                    <a class="btn-floating btn-large waves-effect waves-light red pull-right tooltipped btn"  data-position="left" data-delay="50" data-tooltip="Add College" href="#"><i class="fa fa-plus" aria-hidden="true"></i></a>
+                    <hr>
+            </h3>
+     <div class="row">
+         <div class="col s12 m6  l3">
+             <div class="card hoverable pink">
+                 <div class="card-content mycard-content center">
+                     <p  style="font-size:20px;color:white;"><i class="fas fa-graduation-cap main-icon  circle" aria-hidden="true"></i>Jawaharlal Nehru Technological University</p>
+                     <h5  style="color:white;">VTU</h5>
+                     <p style="color:white;"><i class="fa fa-phone-square main-icon  circle" style="padding:10px;"  aria-hidden="true"></i>08254313476</p>
+                 </div>
+                 <div class="card-content" style="padding: 2px !important;">
+                        <a class="btn-floating halfway-fab waves-effect waves-light red modal-trigger" href="#modaluniversity"><i class="material-icons">edit</i></a>
+                 </div>
+             </div>
+         </div>
+
+         <div class="col s12 m6 l3">
+            <div class="card hoverable orange">
+                <div class="card-content mycard-content center">
+                    <p style="font-size:20px;color:white;"><i class="fas fa-graduation-cap main-icon  circle"></i>Visvesvaraya Technological University</p>
+                    <h5 style="color:white;">VTU</h5>
+                    <p style="color:white;"><i class="fa fa-phone-square main-icon  circle" style="padding:10px;"  aria-hidden="true"></i>08254313476</p>
+
+                </div>
+                <div class="card-content" style="padding: 2px !important;">
+                     <a class="btn-floating halfway-fab waves-effect waves-light red modal-trigger" href="#modaluniversity"><i class="material-icons">edit</i></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col s12 m6 l3">
+                <div class="card hoverable cyan">
+                    <div class="card-content mycard-content center">
+                        <p style="font-size:20px;color:white;"><i class="fas fa-graduation-cap main-icon  circle"></i>Bangalore Central University</p>
+                        <h5 style="color:white;">VTU</h5>
+                        <p style="color:white;"><i class="fa fa-phone-square main-icon  circle" style="padding:10px;"  aria-hidden="true"></i>08254313476</p>
+    
+                    </div>
+                    <div class="card-content" style="padding: 2px !important;">
+                         <a class="btn-floating halfway-fab waves-effect waves-light red modal-trigger" href="#modaluniversity"><i class="material-icons">edit</i></a>
+                    </div>
+                </div>
+        </div>
+
+        
+        <div class="col s12 m6 l3">
+                <div class="card hoverable purple">
+                    <div class="card-content mycard-content center">
+                        <p style="font-size:20px;color:white;"><i class="fas fa-graduation-cap main-icon  circle"></i>Adikavi Nannaya University</p>
+                        <h5 style="color:white;">AIT</h5>
+                        <p style="color:white;"><i class="fa fa-phone-square main-icon  circle" style="padding:10px;"  aria-hidden="true"></i>08254313476</p>
+    
+                    </div>
+                    <div class="card-content" style="padding: 2px !important;">
+                         <a class="btn-floating halfway-fab waves-effect waves-light red modal-trigger" href="#modaluniversity"><i class="material-icons">edit</i></a>
+                    </div>
+                </div>
+        </div>
+   </div>       
+  
+<!-- Modal Structure -->
+<div id="modaluniversity" class="modal">
+    <div class="modal-content">
+        <h4>Edit University details</h4>
+        <hr>
+
+     <div class="row">
+        <form class=" col s12" id="" method="post" action="">
+            <input type="hidden" value="" name="" id="">    
+            <div class="modal-content" style="padding:5px !important;">
+                <div class="row">
+                        <div class="input-field col s12">
+                                <select>
+                                    <option value="" disabled selected>Choose your College</option>
+                                    <option value="1">Option 1</option>
+                                    <option value="2">Option 2</option>
+                                    <option value="3">Option 3</option>
+                                </select>
+                                <label>University (mandatory)</label>
+                        </div>
+                    <div class="input-field col s12">
+                        <input id="name" name="name" type="text" class="validate" value="Adichunchanagiri Institute of Technology">
+                        <label for="name" class="active">College Name (mandatory)</label>
+                    </div>
+                    <div class="input-field col s12">
+
+                        <input id="code" name="code" type="text" class="validate" required="" value="AIT">
+                        <label for="user" class="active">College Code (mandatory)</label>
+                    </div>
+
+                    <div class="input-field col s12">
+                        <input name="email" type="text" class="validate" value="contactus@aitckm.in">
+                        <label class="active">Email</label>
+                    </div>
+                    <div class="input-field col s12">
+                        <input name="phone" type="text" class="validate" value="082622 20444">
+                        <label class="active">Phone</label>
+                    </div>
+                    <div class="input-field col s12">
+                        <input name="address" type="text" class="validate" value="KM Road, Chickmagaluru, Karnataka 577102">
+                        <label class="active">Address</label>
+                    </div>
+
+                    <div class="input-field col s12">
+                        <textarea  name="description" type="text" class="materialize-textarea">Sri Sri Sri Balagangadharanatha Swamiji’s efforts have been focused on the basic necessities like Anna, Akshara and Arogya, i.e., Food, Education and Health.His Holiness is involved in a number of programmes like feeding more than twenty thousand people free a day. It is because devotees are fed incessantly, Sri Math is also called as ‘Annadani Math’. The other programmes are five-crore plantations project, relief works during natural disasters and many more.Sri Swamiji has established more than four hundred recognized and highly regarded Educational Institutions, where more than seventy thousand students are quenching their thirst of knowledge; a significant number are from rural areas.
+                            <br><br>
+                            Sri Sri Sri Nirmalanandanatha Mahaswamiji is an ardent disciple of His Holiness Jagadguru Padmabhushan Bhairavaikya Sri Sri Sri Dr. Balagangadharanatha Mahaswamiji (Sri Guruji), 71st Pontiff of Sri Adichunchanagiri Mahasamsthana Matt. Sri Swamiji, with a Master’s degree in Structural Engineering, influenced by life’s practical philosophy of Sri Guruji and with zeal to understand the eternal truth has earned Master’s degree in Sanskrit Advaita Vidwat. Sri Swamiji was initiated into holy ‘Sanyasa’ order in the year 1998. With the Divine Blessings of Sri Guruji, Sri Swamiji has helped to establish and served institutions ranging from pre-nursery to research centers in Chickballapur and Kolar Districts of Karnataka, providing education to more than 22,000 students.
+                            <br><br>
+                            
+                            Adichunchanagiri Institute of Technology is an engineering college in Chikkamagaluru, Karnataka, India. It was founded in 1980 by Sri Adichunchanagiri Maha Samsthana Math</textarea>
+                        <label class="active">Description</label>
+                    </div>
+
+                    <div class="input-field col s12">
+                        <div class="input-field col s6">
+                                <input name="author_name1" type="text" class="validate" value="His Holiness Jagadguru Sri Sri Sri Dr. Nirmalanandanatha Mahaswamiji">
+                                <label class="active">Author Name</label>
+                        </div>
+                        <div class="input-field col s6">
+                            <input name="designation1" type="text" class="validate" value="President, Sri Adichunchanagiri Shikshana Trust">
+                                <label class="active">Designation</label>
+                        </div>
+                        <div class="input-field col s12">
+                            <textarea name="message1" type="tel" class="materialize-textarea validate" style="height: 44px;">With the Divine Blessings of His Holiness Jagadguru Padmabhushan Sri Sri Sri Dr. Balagangadharanatha Mahaswamiji</textarea>
+                                <label class="active">Message1</label>
+                        </div> 
+                    </div>
+                    <div class="input-field col s12">
+                        <input name="imgurl1" type="text" class="validate" value="http://rjss.org.in/images/nirmalanandanatha-swamiji.png">
+                            <label class="active">Image url1</label>
+                    </div>
+                    <div class="input-field col s12">
+                        <div class="input-field col s6">
+                            <input name="author_name2" type="text" class="validate" value="Dr. C.K. Subbaraya">
+                            <label class="active">Author Name</label>
+                        </div>
+                        <div class="input-field col s6">
+                            <input name="designation2" type="text" class="validate" value="Principal">
+                            <label class="active">Designation</label>
+                        </div>
+                        <div class="input-field col s12">
+                            <textarea name="message2" type="tel" class="materialize-textarea validate"></textarea>
+                            <label>Message2</label>
+                        </div>
+                    </div>
+                    <div class="input-field col s12">
+                        <input name="imgurl2" type="text" class="validate" value="https://i.ytimg.com/vi/dAQwl49C0yw/hqdefault.jpg">
+                        <label class="active">Image url2</label>
+                    </div>
+                    <div class="input-field col s12">
+                        <div class="input-field col s6">
+                            <input name="author_name3" type="text" class="validate" value="Dr. M B Anandaraju">
+                            <label class="active">Author Name</label>
+                        </div>
+                        <div class="input-field col s6">
+                            <input name="designation3" type="text" class="validate" value="Director - Corporate Affairs,HR Training &amp; Placement,BGS Group of Institutions">
+                            <label class="active">Designation</label>
+                        </div>
+                        <div class="input-field col s12">
+                            <textarea name="message3" type="tel" class="materialize-textarea validate"></textarea>
+                            <label>Message3</label>
+                        </div>
+                    </div>
+                    <div class="input-field col s12">
+                        <input name="imgurl3" type="text" class="validate">
+                        <label>Image url3</label>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col l6">
+                            <button class=" btn waves-effect waves-light blue" type="submit">Update</button>
+                    </div>
+                    <div class="col l6">
+                            <a href="#!" class="modal-action modal-close waves-effect waves-green btn right pink ">Close</a>
+                    </div>   
+                </div>
+
+            </div>
+         </form>
+        </div>
+     </div>
+ </div>
+</div>
+<!-- my university end -->
+
+<div class="mymaincontainer" id="mycollege">
+    <div class="row">
+        <h3 class="grey-text text-darken-1">Colleges <a href="#"class="btn-floating right btn-large red waves-effect waves-light tooltipped" id="addcollege-btn" data-position="left" data-delay="50" data-tooltip="Add college"><i class="fa fa-plus" aria-hidden="true"></i></a></h3>
+        <hr>
+    </div>
+
+
+    <div class="row">
+        <div class="col s12 m6 l3">
+            <div class="card cyan">
+                <div class="card-content center mycard-content">
+                    <p style="font-size:20px;color:white;"><i class="fas fa-graduation-cap main-icon"></i> Adichunchanagiri Institute of Technology</p>
+                    <h5 style="color:white;">AIT</h5>
+                    <p style="color:white;"><i class="fa fa-phone-square main-icon  circle "  style="padding:10px;"  aria-hidden="true"></i>08254313476</p>
+                </div>
+                <div class="card-content" style="padding: 2px !important;">
+                        <a class="btn-floating halfway-fab waves-effect waves-light red modal-trigger tooltipped" data-position="left" data-delay="50" data-tooltip="edit" href="#modalcollege"><i class="material-icons">edit</i></a>
+                 </div>
+            </div>
+        </div>
+    
+
+        <div class="col s12 m6 l3">
+                <div class="card purple">
+                    <div class="card-content center mycard-content">
+                        <p style="font-size:20px;color:white;"><i class="fas fa-graduation-cap main-icon"></i> Adichunchanagiri Institute of Technology</p>
+                        <h5 style="color:white;">AIT</h5>
+                        <p style="color:white;"><i class="fa fa-phone-square main-icon  circle "  style="padding:10px;"  aria-hidden="true"></i>08254313476</p>
+                    </div>
+                    <div class="card-content" style="padding: 2px !important;">
+                            <a class="btn-floating halfway-fab waves-effect waves-light red modal-trigger tooltipped" data-position="left" data-delay="50" data-tooltip="edit" href="#modalcollege"><i class="material-icons">edit</i></a>
+                     </div>
+                </div>
+        </div>
+
+        <div class="col s12 m6 l3">
+                <div class="card grey">
+                    <div class="card-content center mycard-content">
+                        <p style="font-size:20px;color:white;"><i class="fas fa-graduation-cap main-icon"></i> Adichunchanagiri Institute of Technology</p>
+                        <h5 style="color:white;">AIT</h5>
+                        <p style="color:white;"><i class="fa fa-phone-square main-icon  circle "  style="padding:10px;"  aria-hidden="true"></i>08254313476</p>
+                    </div>
+                    <div class="card-content" style="padding: 2px !important;">
+                            <a class="btn-floating halfway-fab waves-effect waves-light red modal-trigger tooltipped" data-position="left" data-delay="50" data-tooltip="edit" href="#modalcollege"><i class="material-icons">edit</i></a>
+                     </div>
+                </div>
+        </div>
+
+        <div class="col s12 m6 l3">
+                <div class="card orange">
+                    <div class="card-content center mycard-content">
+                        <p style="font-size:20px;color:white;"><i class="fas fa-graduation-cap main-icon"></i> Adichunchanagiri Institute of Technology</p>
+                        <h5 style="color:white;">AIT</h5>
+                        <p style="color:white;"><i class="fa fa-phone-square main-icon  circle "  style="padding:10px;"  aria-hidden="true"></i>08254313476</p>
+                    </div>
+                    <div class="card-content" style="padding: 2px !important;">
+                            <a class="btn-floating halfway-fab waves-effect waves-light red modal-trigger tooltipped" data-position="left" data-delay="50" data-tooltip="edit" href="#modalcollege"><i class="material-icons">edit</i></a>
+                     </div>
+                </div>
+        </div>
+
+<!--modal strucuture -->
+<div id="modalcollege" class="modal">
+    <div class="modal-content">
+        <div class="row">
+            <h3>Edit College details</h3>
+            <hr>
+        </div>
+        <div class="row s12">
+            <div class="input-field">
+                <select>
+                    <option value=""disabled selected>Choose your option</option>
+                    <option value="1">Adichunchanagiri Institute of Technology</option>
+                    <option value="2">Adichunchanagiri Institute of Technology</option>
+                    <option value="3">Adichunchanagiri Institute of Technology</option>
+                    <option value="4">Adichunchanagiri Institute of Technology</option>
+                </select>
+                <label>University (mandatory)</label>
+            </div>
+        </div>
+        <div class="row s12">
+                <div class="input-field">
+                    <input id="name"  type="text" class="validate" value="Adichunchanagiri Institute of Technology">
+                    <label for="name" class="active">College Name (mandatory)</label>
+                </div>
+        </div>
+        <div class="row s12">
+            <div class="input-field">
+                <input type="text" class="validate" value="AIT">
+                <label for="name" class="active">College Code (mandatory)</label>
+            </div>
+        </div>
+        <div class="row s12">
+            <div class="input-field">
+                <input type="text" class="validate" value="contactus@aitckm.in">
+                <label for="name">Email</label>
+            </div>
+        </div>
+
+        <div class="row ">
+                <div class="input-field s12">
+                    <input type="text" class="validate" value="08254321">
+                    <label for="name">Email</label>
+                </div>
+        </div>
+
+        <div class="row ">
+                <div class="input-field s12">
+                    <input type="text" class="validate" value="KM Road, Chickmagaluru, Karnataka 577102">
+                    <label for="name">Email</label>
+                </div>
+        </div>
+        <div class="row">
+            <div class="input-field s12">
+                <textarea name="" id="" cols="30" rows="10" class="materialize-textarea" style="text-align:justify; color:blue;">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam neque voluptatibus est quidem rem, quibusdam quis ipsa repellat iusto mollitia atque dignissimos possimus saepe iure reprehenderit aperiam harum illum ut. Provident maiores deserunt maxime repellendus cumque, asperiores, architecto harum hic ipsa voluptatibus accusantium aperiam reiciendis. Aperiam labore ducimus quas ipsam magni! Repellat sed optio, reiciendis hic maxime velit unde. Eaque temporibus a quod tempora ea non sequi ipsam quas aliquid commodi. Dolore rerum repellat explicabo eum debitis adipisci suscipit ipsum quas pariatur iste quos sed totam architecto vero corporis, id voluptas at, quidem, aliquam soluta beatae odit? Maxime corrupti eos perferendis veniam culpa dolore esse sit porro quo, quod sed illum. Commodi at iusto itaque quae expedita ut impedit provident deleniti nostrum iste enim voluptas pariatur necessitatibus nam error quaerat velit totam magni facere, perspiciatis atque? Quod assumenda minima culpa, recusandae laudantium nam voluptates necessitatibus earum aut, sint, architecto eaque praesentium. Officiis inventore, minima laborum tenetur rem, temporibus nulla architecto eligendi veritatis recusandae ullam similique eaque. Incidunt tenetur, voluptatibus, deserunt eos dolorum doloremque sequi labore quas cum facere ut cumque quam, est at. Impedit deserunt velit suscipit aperiam est nihil quasi sint culpa cum eum architecto, modi ullam obcaecati ut incidunt voluptas mollitia tempora officiis alias exercitationem vitae! Consectetur rerum totam consequatur voluptate officiis reprehenderit. Labore aliquid quo error vel. Odit officia voluptatem nobis a mollitia, cupiditate eos obcaecati alias voluptate molestias expedita excepturi repellat hic error ab minima unde quasi, nostrum vel dolorem optio ducimus? Facere, unde illum. Blanditiis iste dicta rerum pariatur, sed natus nostrum. Omnis dolor recusandae minus atque in. Aut quam saepe velit quibusdam possimus labore, quas quod aspernatur voluptatem tempore suscipit odio cumque tenetur excepturi sapiente modi, molestiae provident qui vel deserunt id impedit et nam. Magnam, similique cupiditate ipsum beatae laborum, est nisi dolor ullam alias veritatis eligendi incidunt quia quod repellendus voluptatum? Quas, at ratione quaerat aut nihil cupiditate suscipit nemo eveniet quos enim, sint, vitae quae culpa omnis. Laborum laudantium maiores excepturi aliquam laboriosam eius et praesentium sed? Quam sint porro aliquid, molestiae eveniet placeat exercitationem dolorum voluptatem, ratione, perferendis dicta repudiandae expedita adipisci ipsam! Architecto, aspernatur! Officia consequuntur corrupti dolores, non deleniti illum maxime iure explicabo hic culpa nisi modi magnam repellat corporis quo ipsum tempore delectus? Corrupti at ex mollitia quas, nulla aliquam alias. Harum reprehenderit obcaecati adipisci aliquam tenetur ipsum quo ipsa aut ipsam repudiandae quibusdam aliquid dignissimos enim fuga, voluptatem qui amet blanditiis atque non ad voluptas dicta eum! Unde velit culpa impedit! Veritatis sequi exercitationem magni ea doloremque eligendi nostrum id hic eum rem magnam reiciendis, quidem consequatur quas quisquam impedit nisi inventore saepe labore consectetur? Odio mollitia recusandae, at vel laboriosam possimus dicta velit. Fugit, velit voluptatem illo dignissimos culpa quibusdam reiciendis optio perspiciatis ad aliquid facere amet ipsam vitae nesciunt quae consectetur quia maxime, porro quam, praesentium in explicabo. Voluptas fugit eos explicabo sapiente veniam illum autem nostrum corporis ut, tempore aut, rem perferendis voluptates dolores repellendus molestias pariatur? Obcaecati delectus ipsam exercitationem corporis molestias temporibus dolorum cupiditate sequi ullam error reprehenderit doloribus deserunt, rerum alias explicabo odit dolor eligendi vel suscipit aperiam voluptas beatae ipsum? Quis omnis ea rem. Fuga animi, sequi provident reiciendis maxime eius incidunt nemo magnam ullam deleniti nobis, odit dolorem iusto fugiat iure. Assumenda maxime hic rerum fuga voluptate, voluptatibus aut dignissimos a, voluptas cupiditate et similique ut officiis dolor asperiores dolores. Totam ipsum rem omnis corrupti unde aut officia quasi suscipit, tempora debitis quam harum. Earum saepe minima ipsa tempora quisquam voluptatem, ex doloribus tenetur, sequi quae perspiciatis ipsum inventore non! Ad minus illum sit deserunt porro cumque nam esse, laborum, voluptates ducimus molestias. Dolor illo quisquam nemo ratione animi eos aliquam cum, molestiae fuga odit ipsam debitis atque perspiciatis placeat expedita doloribus cupiditate! Soluta assumenda ratione voluptatem iusto debitis numquam laudantium eum minus officiis repellendus dolor quisquam rerum tempore, enim nobis dicta ipsam sapiente perferendis obcaecati odio adipisci, blanditiis fuga! Quia nulla tempora autem eius itaque molestiae. Voluptatibus dolorem magni, nostrum eum quos quas blanditiis explicabo officia nam perspiciatis esse nulla possimus quae omnis aliquid quasi dignissimos ratione totam? Consequuntur officia, delectus voluptatum ipsa reprehenderit accusantium provident! Nostrum quod dolore maxime deleniti ipsa eum repudiandae! Facere quidem ab sed explicabo similique, nulla inventore? Asperiores, ipsum est rem illo repellat veritatis explicabo, id quisquam, ab possimus iste qui? Quaerat officiis molestias deleniti commodi ad architecto eveniet ratione sint dignissimos nesciunt amet saepe culpa fugiat quis quas, suscipit rem adipisci esse facilis, incidunt quibusdam. Aliquam, error eveniet aperiam ut minima amet porro id! Neque laborum exercitationem earum ipsa distinctio corporis explicabo, asperiores facere rerum a, ipsum quasi, natus pariatur ad cum aut sunt consequatur nesciunt eligendi! Officiis dignissimos consequuntur consectetur distinctio maxime quis quo, itaque nihil unde. Saepe accusamus in eum eveniet omnis soluta similique consectetur necessitatibus quod animi architecto, ea ut sequi reiciendis. Vitae nesciunt tempore, ipsam ipsum similique magni eos a, quod eligendi nihil adipisci repellat? Debitis mollitia voluptatem corrupti corporis quos esse aperiam non ad veniam nam quasi facere eveniet modi iusto et quidem sunt, assumenda cupiditate accusantium, vero exercitationem eum ab iure. Nulla at, quibusdam natus tenetur distinctio hic voluptatibus. Deserunt laudantium ex iure maiores dolore modi, unde atque delectus recusandae quaerat at temporibus impedit labore possimus! Dignissimos odit est distinctio quia. Nemo reprehenderit perferendis unde, dolorem repudiandae laboriosam officiis? Dignissimos, architecto. Dolore commodi delectus veritatis minima vero quisquam mollitia voluptatem aliquam animi quasi iusto illo, culpa maxime id? Fugit, nulla excepturi! Amet asperiores doloremque tempora molestias eligendi consequuntur, libero voluptates voluptas tenetur possimus assumenda dolores est atque ad, repellendus, omnis incidunt adipisci ipsam quibusdam earum nam neque odio fugiat delectus. Repellendus at pariatur aperiam impedit natus. Explicabo amet sapiente impedit! Officia nam, debitis excepturi adipisci, quia repellendus natus voluptatum sapiente quasi illum nesciunt quae beatae aliquam ex deserunt neque perspiciatis ipsa doloremque iusto enim fugiat accusamus in quidem dolorum. Libero sit nulla, ipsam cupiditate in quis quasi minus reprehenderit, ad perferendis voluptatem. Voluptatem, ex culpa asperiores provident et animi dolores modi illum, temporibus beatae doloremque!
+                </textarea>
+                <label for="textarea1">Description</label>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col l6">
+                    <div class="input-field">
+                            <input type="text" class="validate" value="His Holiness Jagadguru Sri Sri Sri Dr. Nirmalanandanatha Mahaswamiji">
+                            <label for="name">Author Name</label>
+                        </div>
+            </div>
+            <div class="col l6">
+                    <div class="input-field">
+                            <input type="text" class="validate" value="President, Sri Adichunchanagiri Shikshana Trust">
+                            <label for="name">Designation</label>
+                    </div>
+            </div>                
+        </div>
+        <div class="row">
+            <div class="col s12 input-field">
+                <textarea name="" id="" class="materialize-textarea">
+                   the Divine Blessings of His Holiness Jagadguru Padmabhushan Sri Sri Sri Dr. Balagangadharanatha Mahaswamiji
+                </textarea>
+                <label for="name">Message</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col s12 input-field">
+                <input type="text" value="http://rjss.org.in/images/nirmalanandanatha-swamiji.png" class="validate">
+                <label for="name">Image url1</label>
+            </div>
+        </div>
+
+        <div class="row">
+                <div class="col l6">
+                        <div class="input-field">
+                                <input type="text" class="validate" value="Dr. M B Anandaraju">
+                                <label for="name">Author Name</label>
+                            </div>
+                </div>
+                <div class="col l6">
+                        <div class="input-field">
+                                <input type="text" class="validate" value="Principal">
+                                <label for="name">Designation</label>
+                        </div>
+                </div>                
+        </div>
+
+        <div class="row">
+                <div class="col s12 input-field">
+                    <textarea name="" id="" class="materialize-textarea">
+                       
+                    </textarea>
+                    <label for="name">Message2</label>
+                </div>
+        </div>
+        <div class="row">
+                <div class="col s12 input-field">
+                    <input type="text" value="http://rjss.org.in/images/nirmalanandanatha-swamiji.png" class="validate">
+                    <label for="name">Image url1</label>
+                </div>
+        </div>
+
+        <div class="row">
+                <div class="col l6">
+                        <div class="input-field">
+                                <input type="text" class="validate" value="Dr. M B Anandaraju">
+                                <label for="name">Author Name</label>
+                            </div>
+                </div>
+                <div class="col l6">
+                        <div class="input-field">
+                                <input type="text" class="validate" value="Principal">
+                                <label for="name">Director - Corporate Affairs,HR Training & Placement,BGS Group of Institutions</label>
+                        </div>
+                </div>                
+        </div>
+
+        <div class="row">
+                <div class="col s12 input-field">
+                    <textarea name="" id="" class="materialize-textarea">
+                       
+                    </textarea>
+                    <label for="name">Message3</label>
+                </div>
+        </div>
+        <div class="row">
+                <div class="col s12 input-field">
+                    <input type="text" value="http://rjss.org.in/images/nirmalanandanatha-swamiji.png" class="validate">
+                    <label for="name">Image url3</label>
+                </div>
+        </div>
+        <div class="row">
+            <div class="col s6 l6">
+                <button class="btn blue">Update</button>
+            </div>
+            <div class="col s6 l6">
+                    <button class="btn right pink modal-close  ">close</button>
+            </div>
+         </div>
+      </div>
+   </div>   
+ </div>             <!--  row end--> 
+</div>     <!-- my college end -->
+
+<!-- end college -->
+
+<!-- strat add college page -->
+<div id="myaddcollege">
+    <form action="#">
+    <div class="row">
+        <div class="col s12">
+            <h3>Add College</h3>
+            <hr>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col s12">
+                <div class="input-field">
+                        <select name="" id="">
+                                <option value=""disabled selected>Choose your option</option>
+                                <option value="1">Adichunchanagiri Institute of Technology</option>
+                                <option value="2">Adichunchanagiri Institute of Technology</option>
+                                <option value="3">Adichunchanagiri Institute of Technology</option>
+                                <option value="4">Adichunchanagiri Institute of Technology</option>
+                        </select>
+                        <label for="name">University (mandatory)</label>
+                </div>
+        </div>        
+    </div>
+
+    <div class="row">
+        <div class="col s12">
+                <div class="input-field">
+                        <input type="text" class="validate">
+                        <label for="name">college name (mandatory)</label>
+                </div>
+        </div>        
+    </div>
+
+    <div class="row">
+            <div class="col s12">
+                    <div class="input-field">
+                            <input type="text" class="validate">
+                            <label for="name">college code (mandatory)</label>
+                    </div>
+            </div>        
+    </div>
+
+    <div class="row">
+            <div class="col s12">
+                    <div class="input-field">
+                            <input type="email" class="validate">
+                            <label for="name">Email</label>
+                    </div>
+            </div>        
+    </div>
+
+    <div class="row">
+            <div class="col s12">
+                    <div class="input-field">
+                            <input type="tel" class="validate">
+                            <label for="name">Phone</label>
+                    </div>
+            </div>        
+    </div>
+
+    
+    <div class="row">
+            <div class="col s12">
+                    <div class="input-field">
+                            <textarea name="" class="materialize-textarea"></textarea>
+                            <label for="name">Adress</label>
+                    </div>
+            </div>        
+    </div>
+
+    
+    <div class="row">
+            <div class="col s12">
+                    <div class="input-field">
+                            <textarea name="" class="materialize-textarea"></textarea>
+                            <label for="name">Description</label>
+                    </div>
+            </div>        
+    </div>
+
+    <div class="row">
+        <div class="col s6 l6">
+                <div class="switch">
+                        <label class="label-color">
+                            Inactive
+                            <input type="checkbox" name="status" id="status" checked="">
+                            <span class="lever"></span>
+                            Active
+                        </label>
+                </div>
+        </div>
+        <div class="col s6 l6">
+            <button class="btn waves-effect-waves-light pink pull-right">SAVE</button>
+        </div>        
+    </div>
+</form>
+</div>
+
+<!-- end for collede add page -->
+
+
+</div>
+
+
+
+<div class="myfooter">
+<footer class="page-footer">
+        <div class="footer-copyright" style="background:#00bcd4;padding:0 !important;">
+           <div class="myfootercontainer" style="background: #00bcd4;">
+            <a href="privacy.html" class="white-text"><i class="fa fa-user-secret"></i> Privacy &amp; Terms</a> &nbsp;| &nbsp;
+            <a href="termsuse.html" class="white-text"><i class="fa fa-unsorted"></i> Terms of Use</a> &nbsp;| &nbsp;
+            <a href="termscondition.html" class="white-text"><i class="fa fa-asterisk"></i> Terms & Conditions </a>
+            <a href="https://zestech.in/" class="white-text myfooter-logo"> <img src="../image/logo-white.png" alt="" style="position:relative;top:12px;height:35px;"
+                    class="responsive-img"></a>
+            <p class="myfooterhide" class="white-text ">Copyright © 2018 <a href="#" class="grey-text">Zlearn</a> All
+                Rights Reserved</p>
+        </div>
+        </div>
+</footer>
+</div>
+
+
+
+
+
+
+
+
+     <!--Import jQuery before materialize.js-->
+     <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+     <script type="text/javascript" src="../js/materialize.min.js"></script>
+
+     <script>
+            $(document).ready(function(){
+                $('.dropdown-button').dropdown(
+                    {
+                        hover:true
+                    });
+                $('.dropdown-profilebutton').dropdown();
+                $(".button-collapse").sideNav();
+                $('.dropdown-trigger').dropdown();
+                $('.modal').modal({
+                    opacity:0.2,
+                    inDuration:400,
+                    outDuration:100, 
+                    startingTop:'100%',
+                    endingTop:'10%',
+                    dismissible:true
+                    });
+                $('#textarea1').val('New Text');
+                $('#textarea1').trigger('autoresize');
+                $('select').material_select();
+            });
+     </Script>
+
+   <script>
+    $(document).ready(function(){ 
+        $("#university").click(function(){
+            $("#myuniversity").css("display","block");
+            $("#mycollege,#myaddcollege").css("display","none");
+         });
+         $('#college').click(function(){
+             $('#mycollege').css("display","block");
+             $('#myuniversity,#myaddcollege').css("display","none");
+         });
+         $('#addcollege-btn').click(function(){
+             $('#myaddcollege').css("display","block"); 
+             $('#myuniversity,#mycollege').css("display","none");
+
+         });
+         
+         
+          
+        }); 
+</Script>
+</body>
+</html>
